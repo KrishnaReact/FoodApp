@@ -32,7 +32,7 @@ const { width, height } = Dimensions.get('window');
 export default function PlaceOrder({ navigation }) {
 
     return (
-        <SafeAreaProvider style={{ flex: 1, backgroundColor: '#fff' }}>{console.log('.......')}
+        <SafeAreaProvider style={{ flex: 1, backgroundColor: '#fff' }}>
             <Header backgroundColor={'#E37160'} />
             <View style={{ width: '100%', height: AdjustFontSize(40), backgroundColor: '#E37160', justifyContent: 'center', flexDirection: 'row', alignItems: 'center' }}>
                 <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginHorizontal: AdjustFontSize(10), position: 'absolute', left: 0 }}>
