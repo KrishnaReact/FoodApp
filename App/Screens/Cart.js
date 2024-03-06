@@ -101,7 +101,7 @@ export default function Cart({ navigation, route }) {
                 <Text style={{ fontSize: AdjustFontSize(15), fontWeight: '500', alignSelf: 'center', color: '#fff' }}>{'Cart'}</Text>
             </View>
             <VirtualizedScrollView>
-                <View style={{ flex: 1, marginVertical: 10 }}>
+                <View style={{ flex: 1, marginVertical: 10 }}>{console.log('11111')}
                     <FlatList style={{ flexGrow: 0, }}
                         data={cartData}
                         keyExtractor={(item, index) => index.toString()}
