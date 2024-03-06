@@ -82,8 +82,13 @@ export default function Cart({ navigation, route }) {
             cartData[index] = item
             setClick(!click);
 
-            console.log('decquantity.....', cartData);
+            //console.log('decquantity.....', cartData);
         }
+    }
+
+    const deleteItem=(item,index)=>{
+          cartData.splice(index,1);
+          setClick(!click);
     }
 
     return (
@@ -121,9 +126,9 @@ export default function Cart({ navigation, route }) {
                                                         <TouchableOpacity onPress={() => increaseItemCount(index, item)} style={{ flex: 1, justifyContent: 'center' }}><Text adjustsFontSizeToFit={true} style={{ fontSize: AdjustFontSize(12), color: '#000', alignSelf: 'center', fontWeight: 'bold' }}>{'+'}</Text></TouchableOpacity>
                                                     </View>
                                                 </View>
-                                                <View style={{ width: AdjustFontSize(50), height: AdjustFontSize(25), position: 'absolute', right: 0, justifyContent: 'center' }}>
+                                                <TouchableOpacity onPress={()=>deleteItem(item,index)}  style={{ width: AdjustFontSize(50), height: AdjustFontSize(25), position: 'absolute', right: 0, justifyContent: 'center' }}>
                                                     <Image source={require('../Screens/assets/delete.png')} style={{ width: AdjustFontSize(18), height: AdjustFontSize(18), alignSelf: 'center', tintColor: '#E37160' }} />
-                                                </View>
+                                                </TouchableOpacity>
                                             </View>
                                         </View>
                                     </View>

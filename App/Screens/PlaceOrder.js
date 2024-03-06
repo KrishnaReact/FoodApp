@@ -33,7 +33,7 @@ export default function PlaceOrder({ navigation }) {
 
     return (
         <SafeAreaProvider style={{ flex: 1, backgroundColor: '#fff' }}>
-            <Header backgroundColor={'#E37160'} />{console.log('222222')}
+            <Header backgroundColor={'#E37160'} />
             <View style={{ width: '100%', height: AdjustFontSize(40), backgroundColor: '#E37160', justifyContent: 'center', flexDirection: 'row', alignItems: 'center' }}>
                 <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginHorizontal: AdjustFontSize(10), position: 'absolute', left: 0 }}>
                     <Image source={require('../Screens/assets/back.png')} style={{ width: AdjustFontSize(18), height: AdjustFontSize(18), alignSelf: 'center', tintColor: '#fff' }} />
